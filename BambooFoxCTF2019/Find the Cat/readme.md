@@ -8,7 +8,7 @@ Writeup By: **yctseng1227**
 
 The cat is hiding somewhere. Where is the cat?
 
-[cat.png](https://github.com/MacacaHub/CTF-writeups/raw/master/BambooFoxCTF2019/cat.png)
+[cat.png](https://github.com/MacacaHub/CTF-writeups/blob/master/BambooFoxCTF2019/Find%20the%20Cat/cat.png)
 
 ## Solution
 
