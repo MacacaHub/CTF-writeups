@@ -1,0 +1,455 @@
+Entering main.PikaCheck at /home/terrynini38514/Desktop/PokemonV2.go:6:6.
+.0:
+	 t0 = local [20]int (a)
+	 jump 3
+.3:
+	 t92 = phi [0: 0:int, 1: t10] #i
+	 t93 = len(input)
+	 t94 = t92 < t93
+	 if t94 goto 1 else 2
+.1:
+	 t1 = &t0[t92]
+	 t2 = input[t92]
+	 t3 = convert int <- uint8 (t2)
+	 t4 = t92 + 1:int
+	 t5 = len(input)
+	 t6 = t4 % t5
+	 t7 = input[t6]
+	 t8 = convert int <- uint8 (t7)
+	 t9 = t3 + t8
+	 *t1 = t9
+	 t10 = t92 + 1:int ==>t10=1
+	 jump 3
+.3:
+	 t92 = phi [0: 0:int, 1: t10] #i
+	 t93 = len(input)
+	 t94 = t92 < t93
+	 if t94 goto 1 else 2
+.1:
+	 t1 = &t0[t92]
+	 t2 = input[t92]
+	 t3 = convert int <- uint8 (t2)
+	 t4 = t92 + 1:int
+	 t5 = len(input)
+	 t6 = t4 % t5
+	 t7 = input[t6]
+	 t8 = convert int <- uint8 (t7)
+	 t9 = t3 + t8
+	 *t1 = t9
+	 t10 = t92 + 1:int ==>t10=2
+	 jump 3
+.3:
+	 t92 = phi [0: 0:int, 1: t10] #i
+	 t93 = len(input)
+	 t94 = t92 < t93
+	 if t94 goto 1 else 2
+.1:
+	 t1 = &t0[t92]
+	 t2 = input[t92]
+	 t3 = convert int <- uint8 (t2)
+	 t4 = t92 + 1:int
+	 t5 = len(input)
+	 t6 = t4 % t5
+	 t7 = input[t6]
+	 t8 = convert int <- uint8 (t7)
+	 t9 = t3 + t8
+	 *t1 = t9
+	 t10 = t92 + 1:int ==>t10=3
+	 jump 3
+.3:
+	 t92 = phi [0: 0:int, 1: t10] #i
+	 t93 = len(input)
+	 t94 = t92 < t93
+	 if t94 goto 1 else 2
+.1:
+	 t1 = &t0[t92]
+	 t2 = input[t92]
+	 t3 = convert int <- uint8 (t2)
+	 t4 = t92 + 1:int
+	 t5 = len(input)
+	 t6 = t4 % t5
+	 t7 = input[t6]
+	 t8 = convert int <- uint8 (t7)
+	 t9 = t3 + t8
+	 *t1 = t9
+	 t10 = t92 + 1:int ==>t10=4
+	 jump 3
+.3:
+	 t92 = phi [0: 0:int, 1: t10] #i
+	 t93 = len(input)
+	 t94 = t92 < t93
+	 if t94 goto 1 else 2
+.1:
+	 t1 = &t0[t92]
+	 t2 = input[t92]
+	 t3 = convert int <- uint8 (t2)
+	 t4 = t92 + 1:int
+	 t5 = len(input)
+	 t6 = t4 % t5
+	 t7 = input[t6]
+	 t8 = convert int <- uint8 (t7)
+	 t9 = t3 + t8
+	 *t1 = t9
+	 t10 = t92 + 1:int ==>t10=5
+	 jump 3
+.3:
+	 t92 = phi [0: 0:int, 1: t10] #i
+	 t93 = len(input)
+	 t94 = t92 < t93
+	 if t94 goto 1 else 2
+.1:
+	 t1 = &t0[t92]
+	 t2 = input[t92]
+	 t3 = convert int <- uint8 (t2)
+	 t4 = t92 + 1:int
+	 t5 = len(input)
+	 t6 = t4 % t5
+	 t7 = input[t6]
+	 t8 = convert int <- uint8 (t7)
+	 t9 = t3 + t8
+	 *t1 = t9
+	 t10 = t92 + 1:int ==>t10=6
+	 jump 3
+.3:
+	 t92 = phi [0: 0:int, 1: t10] #i
+	 t93 = len(input)
+	 t94 = t92 < t93
+	 if t94 goto 1 else 2
+.1:
+	 t1 = &t0[t92]
+	 t2 = input[t92]
+	 t3 = convert int <- uint8 (t2)
+	 t4 = t92 + 1:int
+	 t5 = len(input)
+	 t6 = t4 % t5
+	 t7 = input[t6]
+	 t8 = convert int <- uint8 (t7)
+	 t9 = t3 + t8
+	 *t1 = t9
+	 t10 = t92 + 1:int ==>t10=7
+	 jump 3
+.3:
+	 t92 = phi [0: 0:int, 1: t10] #i
+	 t93 = len(input)
+	 t94 = t92 < t93
+	 if t94 goto 1 else 2
+.1:
+	 t1 = &t0[t92]
+	 t2 = input[t92]
+	 t3 = convert int <- uint8 (t2)
+	 t4 = t92 + 1:int
+	 t5 = len(input)
+	 t6 = t4 % t5
+	 t7 = input[t6]
+	 t8 = convert int <- uint8 (t7)
+	 t9 = t3 + t8
+	 *t1 = t9
+	 t10 = t92 + 1:int ==>t10=8
+	 jump 3
+.3:
+	 t92 = phi [0: 0:int, 1: t10] #i
+	 t93 = len(input)
+	 t94 = t92 < t93
+	 if t94 goto 1 else 2
+.1:
+	 t1 = &t0[t92]
+	 t2 = input[t92]
+	 t3 = convert int <- uint8 (t2)
+	 t4 = t92 + 1:int
+	 t5 = len(input)
+	 t6 = t4 % t5
+	 t7 = input[t6]
+	 t8 = convert int <- uint8 (t7)
+	 t9 = t3 + t8
+	 *t1 = t9
+	 t10 = t92 + 1:int ==>t10=9
+	 jump 3
+.3:
+	 t92 = phi [0: 0:int, 1: t10] #i
+	 t93 = len(input)
+	 t94 = t92 < t93
+	 if t94 goto 1 else 2
+.1:
+	 t1 = &t0[t92]
+	 t2 = input[t92]
+	 t3 = convert int <- uint8 (t2)
+	 t4 = t92 + 1:int
+	 t5 = len(input)
+	 t6 = t4 % t5
+	 t7 = input[t6]
+	 t8 = convert int <- uint8 (t7)
+	 t9 = t3 + t8
+	 *t1 = t9
+	 t10 = t92 + 1:int ==>t10=10
+	 jump 3
+.3:
+	 t92 = phi [0: 0:int, 1: t10] #i
+	 t93 = len(input)
+	 t94 = t92 < t93
+	 if t94 goto 1 else 2
+.1:
+	 t1 = &t0[t92]
+	 t2 = input[t92]
+	 t3 = convert int <- uint8 (t2)
+	 t4 = t92 + 1:int
+	 t5 = len(input)
+	 t6 = t4 % t5
+	 t7 = input[t6]
+	 t8 = convert int <- uint8 (t7)
+	 t9 = t3 + t8
+	 *t1 = t9
+	 t10 = t92 + 1:int ==>t10=11
+	 jump 3
+.3:
+	 t92 = phi [0: 0:int, 1: t10] #i
+	 t93 = len(input)
+	 t94 = t92 < t93
+	 if t94 goto 1 else 2
+.1:
+	 t1 = &t0[t92]
+	 t2 = input[t92]
+	 t3 = convert int <- uint8 (t2)
+	 t4 = t92 + 1:int
+	 t5 = len(input)
+	 t6 = t4 % t5
+	 t7 = input[t6]
+	 t8 = convert int <- uint8 (t7)
+	 t9 = t3 + t8
+	 *t1 = t9
+	 t10 = t92 + 1:int ==>t10=12
+	 jump 3
+.3:
+	 t92 = phi [0: 0:int, 1: t10] #i
+	 t93 = len(input)
+	 t94 = t92 < t93
+	 if t94 goto 1 else 2
+.1:
+	 t1 = &t0[t92]
+	 t2 = input[t92]
+	 t3 = convert int <- uint8 (t2)
+	 t4 = t92 + 1:int
+	 t5 = len(input)
+	 t6 = t4 % t5
+	 t7 = input[t6]
+	 t8 = convert int <- uint8 (t7)
+	 t9 = t3 + t8
+	 *t1 = t9
+	 t10 = t92 + 1:int ==>t10=13
+	 jump 3
+.3:
+	 t92 = phi [0: 0:int, 1: t10] #i
+	 t93 = len(input)
+	 t94 = t92 < t93
+	 if t94 goto 1 else 2
+.1:
+	 t1 = &t0[t92]
+	 t2 = input[t92]
+	 t3 = convert int <- uint8 (t2)
+	 t4 = t92 + 1:int
+	 t5 = len(input)
+	 t6 = t4 % t5
+	 t7 = input[t6]
+	 t8 = convert int <- uint8 (t7)
+	 t9 = t3 + t8
+	 *t1 = t9
+	 t10 = t92 + 1:int ==>t10=14
+	 jump 3
+.3:
+	 t92 = phi [0: 0:int, 1: t10] #i
+	 t93 = len(input)
+	 t94 = t92 < t93
+	 if t94 goto 1 else 2
+.1:
+	 t1 = &t0[t92]
+	 t2 = input[t92]
+	 t3 = convert int <- uint8 (t2)
+	 t4 = t92 + 1:int
+	 t5 = len(input)
+	 t6 = t4 % t5
+	 t7 = input[t6]
+	 t8 = convert int <- uint8 (t7)
+	 t9 = t3 + t8
+	 *t1 = t9
+	 t10 = t92 + 1:int
+	 jump 3
+.3:
+	 t92 = phi [0: 0:int, 1: t10] #i
+	 t93 = len(input)
+	 t94 = t92 < t93
+	 if t94 goto 1 else 2
+.1:
+	 t1 = &t0[t92]
+	 t2 = input[t92]
+	 t3 = convert int <- uint8 (t2)
+	 t4 = t92 + 1:int
+	 t5 = len(input)
+	 t6 = t4 % t5
+	 t7 = input[t6]
+	 t8 = convert int <- uint8 (t7)
+	 t9 = t3 + t8
+	 *t1 = t9
+	 t10 = t92 + 1:int
+	 jump 3
+.3:
+	 t92 = phi [0: 0:int, 1: t10] #i
+	 t93 = len(input)
+	 t94 = t92 < t93
+	 if t94 goto 1 else 2
+.1:
+	 t1 = &t0[t92]
+	 t2 = input[t92]
+	 t3 = convert int <- uint8 (t2)
+	 t4 = t92 + 1:int
+	 t5 = len(input)
+	 t6 = t4 % t5
+	 t7 = input[t6]
+	 t8 = convert int <- uint8 (t7)
+	 t9 = t3 + t8
+	 *t1 = t9
+	 t10 = t92 + 1:int
+	 jump 3
+.3:
+	 t92 = phi [0: 0:int, 1: t10] #i
+	 t93 = len(input)
+	 t94 = t92 < t93
+	 if t94 goto 1 else 2
+.1:
+	 t1 = &t0[t92]
+	 t2 = input[t92]
+	 t3 = convert int <- uint8 (t2)
+	 t4 = t92 + 1:int
+	 t5 = len(input)
+	 t6 = t4 % t5
+	 t7 = input[t6]
+	 t8 = convert int <- uint8 (t7)
+	 t9 = t3 + t8
+	 *t1 = t9
+	 t10 = t92 + 1:int
+	 jump 3
+.3:
+	 t92 = phi [0: 0:int, 1: t10] #i
+	 t93 = len(input)
+	 t94 = t92 < t93
+	 if t94 goto 1 else 2
+.1:
+	 t1 = &t0[t92]
+	 t2 = input[t92]
+	 t3 = convert int <- uint8 (t2)
+	 t4 = t92 + 1:int
+	 t5 = len(input)
+	 t6 = t4 % t5
+	 t7 = input[t6]
+	 t8 = convert int <- uint8 (t7)
+	 t9 = t3 + t8
+	 *t1 = t9
+	 t10 = t92 + 1:int
+	 jump 3
+.3:
+	 t92 = phi [0: 0:int, 1: t10] #i
+	 t93 = len(input)
+	 t94 = t92 < t93
+	 if t94 goto 1 else 2
+.1:
+	 t1 = &t0[t92]
+	 t2 = input[t92]
+	 t3 = convert int <- uint8 (t2)
+	 t4 = t92 + 1:int
+	 t5 = len(input)
+	 t6 = t4 % t5
+	 t7 = input[t6]
+	 t8 = convert int <- uint8 (t7)
+	 t9 = t3 + t8
+	 *t1 = t9
+	 t10 = t92 + 1:int ==>t10=20
+	 jump 3
+.3:
+	 t92 = phi [0: 0:int, 1: t10] #i
+	 t93 = len(input)
+	 t94 = t92 < t93
+	 if t94 goto 1 else 2
+.2:
+	 t11 = &t0[0:int]
+	 t12 = *t11
+	 t13 = t12 - 185:int
+	 t14 = 0:int + t13
+	 t15 = &t0[1:int]
+	 t16 = *t15
+	 t17 = t16 - 212:int
+	 t18 = t14 + t17
+	 t19 = &t0[2:int]
+	 t20 = *t19
+	 t21 = t20 - 172:int
+	 t22 = t18 + t21
+	 t23 = &t0[3:int]
+	 t24 = *t23
+	 t25 = t24 - 145:int
+	 t26 = t22 + t25
+	 t27 = &t0[4:int]
+	 t28 = *t27
+	 t29 = t28 - 185:int
+	 t30 = t26 + t29
+	 t31 = &t0[5:int]
+	 t32 = *t31
+	 t33 = t32 - 212:int
+	 t34 = t30 + t33
+	 t35 = &t0[6:int]
+	 t36 = *t35
+	 t37 = t36 - 172:int
+	 t38 = t34 + t37
+	 t39 = &t0[7:int]
+	 t40 = *t39
+	 t41 = t40 - 177:int
+	 t42 = t38 + t41
+	 t43 = &t0[8:int]
+	 t44 = *t43
+	 t45 = t44 - 217:int
+	 t46 = t42 + t45
+	 t47 = &t0[9:int]
+	 t48 = *t47
+	 t49 = t48 - 212:int
+	 t50 = t46 + t49
+	 t51 = &t0[10:int]
+	 t52 = *t51
+	 t53 = t52 - 204:int
+	 t54 = t50 + t53
+	 t55 = &t0[11:int]
+	 t56 = *t55
+	 t57 = t56 - 177:int
+	 t58 = t54 + t57
+	 t59 = &t0[12:int]
+	 t60 = *t59
+	 t61 = t60 - 185:int
+	 t62 = t58 + t61
+	 t63 = &t0[13:int]
+	 t64 = *t63
+	 t65 = t64 - 212:int
+	 t66 = t62 + t65
+	 t67 = &t0[14:int]
+	 t68 = *t67
+	 t69 = t68 - 204:int
+	 t70 = t66 + t69
+	 t71 = &t0[15:int]
+	 t72 = *t71
+	 t73 = t72 - 209:int
+	 t74 = t70 + t73
+	 t75 = &t0[16:int]
+	 t76 = *t75
+	 t77 = t76 - 161:int
+	 t78 = t74 + t77
+	 t79 = &t0[17:int]
+	 t80 = *t79
+	 t81 = t80 - 124:int
+	 t82 = t78 + t81
+	 t83 = &t0[18:int]
+	 t84 = *t83
+	 t85 = t84 - 172:int
+	 t86 = t82 + t85
+	 t87 = &t0[19:int]
+	 t88 = *t87
+	 t89 = t88 - 177:int
+	 t90 = t86 + t89
+	 t91 = t90 == 0:int
+	 if t91 goto 4 else 5
+.5:
+	 return false:bool
+Leaving main.PikaCheck, resuming main.main at /home/terrynini38514/Desktop/PokemonV2.go:41:17.
