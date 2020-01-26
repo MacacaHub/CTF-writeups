@@ -4,7 +4,7 @@ Web, 251/500 Points
 
 Auther: **kaibro**
 
-Writeup By: **yctseng1227**
+Writeup By: **yctseng1227**、**stavhaygn**
 
 ## Description
 
@@ -43,7 +43,7 @@ Writeup By: **yctseng1227**
 
 拿去 [CSP-evaluator](https://csp-evaluator.withgoogle.com/) 發現該網站CSP機制不完全，可嵌入在該網站上傳的檔案。
 
-從 `Meow Uploader` 可以點 `Meow src`(source code) 發現上傳只接受副檔名為 `.meow` 的檔案，接著對其檔案執行 `unzip` 指令，檢查解壓縮後為 `meow` 的檔含，是否開頭為 "edu-ctf" 字串，若檢查皆成功，將成功上傳檔案，否則上傳檔案失敗。
+從 `Meow Uploader` 可以點 `Meow src`(source code) 發現上傳只接受副檔名為 `.meow` 的檔案，接著對其檔案執行 `unzip` 指令，檢查解壓縮後為 `meow` 的檔案，是否開頭為 "edu-ctf" 字串，若檢查皆成功，將成功上傳檔案，否則上傳檔案失敗。
 
 因此配合前面提到的 `Meow me` ，我們可以對剛檔案做一些壞壞的事^~^+
 
@@ -71,9 +71,9 @@ PK...
 > 作業環境 Ubuntu 18.04 / Python 3.6
 
 ```shell
-sudo pip3 install flask
-sudo pip3 install flask_cors
-python3 app.py
+$ sudo pip3 install flask
+$ sudo pip3 install flask_cors
+$ python3 app.py
 ```
 
 [app.py]()
@@ -99,7 +99,7 @@ if __name__ == '__main__':
 
 而 `Meow me` 頁面送出 URL request 就是我們最後要拿去 `Report to admin` 的XSS URL。
 
-除此之外，還需要計算PoW，相關介紹可以參考另一篇 Writeup [Ponzi Scheme](../Ponzi\ Scheme/readme.md)，不過作法上可以直接Python用排列組合爆搜答案即可。
+除此之外，還需要計算PoW，相關介紹可以參考另一篇 Writeup [Ponzi Scheme](../Ponzi Scheme/readme.md)，不過作法上可以直接Python用排列組合爆搜答案即可。
 
 ```python
 #!/usr/bin/env python3
