@@ -4,7 +4,7 @@ Date(UTC+8): 2020.5.23(Sat.) 9:30 - 11:30
 
 Site: https://es.tcat2020.twisc.ncku.edu.tw
 
-Main Author: yctseng1227
+Main Author: **yctseng1227**
 
 ## Info
 
@@ -22,15 +22,21 @@ Main Author: yctseng1227
 ## Timeline
 
 **9:30** 競賽開始
+
 **10:48** 我方主動詢問網站嚴重延遲問題，官方提供新競賽連結
+
 **11:35** 正式破台（全16題，前15題均於**11:30**前作答完成）
+
 **11:52** 主動詢問才得知比賽要延長
+
 **12:05** 向主辦方提出改善建議
+
 **12:13** 主辦方公布延長競賽時間
 
 ## Result
 
 Rank : 1 / 50(大專院校組)
+
 Score(11:35) : 39
 
 ![](./file/score.png)
@@ -123,6 +129,7 @@ Q16:X
 
 而以下的 PHP 弱型別特性，除了成功繞過第三和第四個條件的同時，也能成功 GET `user_search`
 > [] < 1000 為 true
+
 > (string) [] > 0 為 false
 
 
@@ -163,7 +170,7 @@ Q16: A
 
 ![](./description/p8.png)
 
-![](./file/p8_img1.png)
+![](./file/p8_img1.png) 
 ![](./file/p8_img2.png)
 
 送出指紋`103a43eb93adcf31a0b452df950d850a735ec421`即可拿到flag
@@ -180,13 +187,14 @@ Q16: Q
 ![](./file/p9_img.png)
 
 用Burp Suite增加以下header
+```
 X-Originating-IP: 192.168.10.251
 X-Forwarded-For: 192.168.10.251
 X-Remote-IP: 192.168.10.251
 X-Remote-Addr: 192.168.10.251
 Remote-Addr: 192.168.10.251
 Client-IP: 192.168.10.251
-
+```
 最後是驗Client-IP
 
 ```
@@ -228,6 +236,7 @@ Q16: R
 ![](./description/p12.png)
 
 同第8題作法
+
 ![](./file/p12_img.png)
 
 ```
@@ -240,15 +249,21 @@ Q16: K
 ![](./description/p13.png)
 
 對TCP封包點擊Follow -> TCP Stream
+
 ![](./file/p13_img1.png)
+
 右下Stream編號上下點一點就看的到了
+
 ![](./file/p13_img2.png)
 
 account=admin
+
 password=CvphvghcT9yh
 
 或是File -> Export Objects -> HTTP
+
 ![](./file/p13_img3.png)
+
 ![](./file/p13_img4.png)
 
 ```
@@ -260,7 +275,8 @@ Q16: X
 
 ![](./description/p14.png)
 
-圖片中埋`zip`，用`foremost`拆圖片即可。
+圖片中藏`zip`，用`foremost`拆圖片即可。
+
 `TCat2020` : `m4xr+r8n%gmsq!ca`
 
 ```
@@ -301,6 +317,7 @@ Q16: M
 ![](./description/p16.png)
 
 解法：找出前面15題解完的題目 Respond Header Q16的代碼，拼湊出來就是密碼。
+
 密碼: NGBXNBAQJARKXBM
 
 ```
@@ -314,4 +331,4 @@ Q16: M
 
 筆者的兩位隊友技能點大都在`PWN`、`Binary`，這場賽事顯然沒有他們大顯身手的餘地，但程度也足以愜意解題。整場很大的問題是連線十分不穩，光是連線看題目都要等上好一段時間，筆者解出來的Flag幾乎都交給隊友們提交（可能也該換電腦了），賽中一度被迫囤Flag慢慢等連線，沒有想到直接送request這招實在失策，錯失很多拿首殺的機會，從我們多次參加線上賽的經驗，本次的競賽體驗相當糟糕。
 
-其次是官方的反應，所謂「會吵的小孩有糖吃」，雖然站在官方角度是就事論事針對個隊伍的提問予以回覆，但是筆者認為有些該公布的消息就要讓所有參賽者知道，例如提供新的競賽連結，雖然知道是為了分流用但還是覺得有失公允，期待官方下次能讓人看到改善... 如果還有下次的話（汗）。
+其次是官方的反應，所謂「會吵的小孩有糖吃」，雖然站在官方角度是就事論事針對個隊伍的提問予以回覆，但是筆者認為有些該公布的消息就要讓所有參賽者知道，例如提供新的競賽連結，雖然能理解是為了分流用但還是覺得有失公允，期待官方下次能讓人看到改善... 如果還有下次的話（汗）。
