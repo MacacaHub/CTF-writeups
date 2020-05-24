@@ -128,7 +128,7 @@ Q16:X
 在分析 GET 後的內容時，若變數名稱本身包含 `_` 字元，傳遞參數時可輸入包含 `.`, `+`, `[`, `]` 的字串來繞過 strpos() 的剖析，例如 `user.search` 或是 `user+search` 等替代原先的 `user_search`，同樣也能成功，因此 strpos() 就會回傳 false。
 
 而以下的 PHP 弱型別特性，除了成功繞過第三和第四個條件的同時，也能成功 GET `user_search`
-> [] < 1000 為 true
+> [] < 1000 為 false
 
 > (string) [] > 0 為 false
 
