@@ -1,3 +1,5 @@
+# TJCTF2020-Web Weak Password
+# Coding by yctseng1227
 import requests
 import string
 
