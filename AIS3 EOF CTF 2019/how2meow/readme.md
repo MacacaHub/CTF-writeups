@@ -99,7 +99,7 @@ if __name__ == '__main__':
 
 而 `Meow me` 頁面送出 URL request 就是我們最後要拿去 `Report to admin` 的XSS URL。
 
-除此之外，還需要計算PoW，相關介紹可以參考另一篇 Writeup [Ponzi Scheme](../Ponzi Scheme/readme.md)，不過作法上可以直接Python用排列組合爆搜答案即可。
+除此之外，還需要計算PoW，相關介紹可以參考另一篇 Writeup [Ponzi Scheme](https://github.com/MacacaHub/CTF-writeups/blob/master/AIS3%20EOF%20CTF%202019/Ponzi%20Scheme/readme.md)，不過作法上可以直接Python用排列組合爆搜答案即可。
 
 ```python
 #!/usr/bin/env python3
