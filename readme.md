@@ -2,6 +2,7 @@
 
 - 2020
     - TCat CTF 2020
+    - HTCF CTF (only for NSYSU course)
 
 - 2019
     - X-MAS CTF 2019
