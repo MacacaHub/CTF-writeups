@@ -35,7 +35,7 @@ Writeup By: **yctseng1227**
 
 > 1. 請善用 VSCode 的 highlight 功能
 > 2. script 是以 `;` 作為語義上的結尾，所以可直接取代成換行`\n` (但要注意迴圈內的分號)
-> 3. 加密key `$xor_passwd` 中間那個是 "0" 不是 "Ｏ" ... 如果寫錯會還原不完整xD
+> 3. 加密key `$xor_passwd` 中間那個是 "0" 不是 "O" ... 如果寫錯會還原不完整xD
 
 
 [Get-xor.ps1](./Get-xor.ps1)
@@ -173,7 +173,7 @@ with open('out.raw', 'w') as f:
 
 ![ wireshark-word_packet](./pic/04.png)
 
-同樣用 `Follow > TCP stream` 觀察，很容易找到這份看起來就是**被**處理過的資料，可以透過 `File > Export Objects > HTTP...` 把指定的封包 dump 出來。
+同樣用 `Follow > TCP stream` 觀察，很容易找到這份看起來就是被處理過的資料，可以透過 `File > Export Objects > HTTP...` 把指定的封包 dump 出來。
 
 ![ wireshark-exports_object_http](./pic/05.png) 
 
@@ -208,7 +208,7 @@ with open('out.raw', 'w') as f:
 7.	AD域中的DNS主機的名稱與IP位址?
 > dc.macaca.lab、192.168.77.10
 8.	網站產生漏洞原因是? 
-> 於網站中存在含有 RCE(Remote Code Execution) 漏洞，且針對輸入的參數並沒有進行格式檢查，導致駭客可以透過植入C&C惡意程式洩漏資訊。
+> 於網站中存在含有 RCE(Remote Code Execution) 漏洞，且針對輸入的參數並沒有進行格式檢查，導致駭客可以透過植入 C&C 惡意程式洩漏資訊。
 9.	上傳洩漏資料的網站所用的port?
 > 42794
 10.	flag是?
@@ -226,8 +226,8 @@ with open('out.raw', 'w') as f:
 ![ ](./pic/08.png)
 
 
-駭客先是使用 `dir` 指令成功讓網站執行並回傳資訊，確認 RCE 漏洞，再利用 PowerShell 不被 Windows 偵測的特性使用無檔案攻擊，將指令執行至 [AD](https://en.wikipedia.org/wiki/Active_Directory) 中的子網域主機。在指令方面，駭客主要建立C&C主機連線，並且將輸入指令以及回傳資訊透過 Get-Xor function 進行混淆，用意是增加資安人員在鑑識分析上的困難度。
+駭客先是使用 `dir` 指令成功讓網站執行並回傳資訊，確認 RCE 漏洞，再利用 PowerShell 不被 Windows 偵測的特性使用無檔案攻擊，將指令執行至 [AD](https://en.wikipedia.org/wiki/Active_Directory) 中的子網域主機。在指令方面，駭客主要建立 C&C Server連線，並且將輸入指令以及回傳資訊透過 Get-Xor function 進行混淆，用意是增加資安人員在鑑識分析上的困難度。
 
 駭客取得主機執行指令的使用者權限後進行搜集情資，包含查看當前使用者(whoami)、網卡資訊(ipconfig /all)、系統資訊(systeminfo)、列出arp紀錄(arp -a)，查看網域底下其他主機資訊(nslookup)，最後才開始針對目錄進行探索。
 
-駭客從原目錄 `C:\Users\web\xampp\htdocs` 逐步移動到 `C:\Users\web\Desktop\_` 發現 passwords.txt 拿到ftp、docx、sso三組密碼，同時也在`C:\Users\web\Downloads` 底下找到 secret.docx，最後透過 PowerShell 指令將該檔案上傳至C&C Server。
+駭客從原目錄 `C:\Users\web\xampp\htdocs` 逐步移動到 `C:\Users\web\Desktop\_` 發現 passwords.txt 拿到ftp、docx、sso三組密碼，同時也在`C:\Users\web\Downloads` 底下找到 secret.docx，最後透過 PowerShell 指令將該檔案上傳至 C&C Server。
