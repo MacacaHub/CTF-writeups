@@ -13,7 +13,6 @@ for p in pkts:
             
             xor_key = base64.b64decode(raw.split(b'\r\n')[3])
             ciphertext = raw.split(b'\r\n')[7]
-            res = []
 
             res = [ word ^ xor_key[idx % len(xor_key)] for idx, word in enumerate(ciphertext) ]
             img = open(filename, 'wb')
