@@ -1,9 +1,16 @@
 # HTCF CTF
 
-The CTF practice in NSYSU course HACK TECHNOLOGY & COMPUTER FORENSIC
+The CTF training in NSYSU course HACK TECHNOLOGY & COMPUTER FORENSIC
 
-site: [https://htcf.macacahub.tw](https://htcf.macacahub.tw)
 
 ## Homework
 
+site: https://htcf.macacahub.tw
+
 1. reverse shell
+
+
+## Midterm
+
+site: https://mid.macacahub.tw/
+
