@@ -15,6 +15,7 @@ Writeup By: **yctseng1227**
 #### Description
 
 images~ images~ images~
+
 > hint: flag在圖片裡
 
 [pcap file](https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/image%200x1/images_0x1.pcap)
@@ -40,7 +41,9 @@ images~ images~ images~
 
 #### Description
 有趣的CSS Keylogger文章：
+
 [CSS keylogger：攻擊與防禦](https://blog.techbridge.cc/2018/03/02/css-key-logger/)
+
 [Stealing Data With CSS: Attack and Defense](https://www.mike-gualtieri.com/posts/stealing-data-with-css-attack-and-defense)
 
 嘗試在封包中分析此次的CSS Keylogger攻擊與受害者c7f網站上的信箱與密碼，並且嘗試登入
@@ -48,20 +51,24 @@ images~ images~ images~
 > hint: 運氣好或靠實力拿到小遊戲中的flag吧
 
 網站連結 http://c7f.macacahub.tw/login
+
 [pcap file](https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/CSS-Keylogger/CSS_Keylogger.pcap)
 
 #### Solution
 
 題目給了兩篇關於 CSS Keylogger 的文章，算是課外補充。
+
 如果認真對網站進行研究會發現該網站被駭入後，CSS Keylogger 寫在 `bootstrap.min.css` 內（不知道這個也解的出來啦 XD）。
 ![ ](https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/CSS-Keylogger/pic/01.png)
 
 從網站 source code 可以看得出來登入會驗證信箱格式、以及密碼會加鹽再 Hash，因此不用期待能把封包內撈到的 Hash 拿去爆破密碼。
+
 從.pcap封包檔的 `Follow > TCP Stream` 可以觀察到如文章所提的 CSS Keylogger 帶出的參數。
 
 ![ ](https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/CSS-Keylogger/pic/02.png)
 
 其中前面的 `/e/` 表示 email、`p` 表示password，也算一種小提示。
+
 總之整理前面所觀察到的封包特徵，可以用 filter 簡單過濾出來（當然用 TCP Stream 慢慢點也是可以）。
 
 > http && ip.dst == 45.79.159.73
@@ -69,13 +76,13 @@ images~ images~ images~
 ![ ](https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/CSS-Keylogger/pic/03.png)
 
 這樣就能拿到三組帳號，再來就是有點運氣的嘗試登入... 沒錯，會這麼說是因為我拿到帳密戳了半小時都沒成功，最後要放棄時就莫名其妙登入了XDDDDDD 
+
 事後和助教討論也沒得到個明確結果，如果有想法歡迎找我們討論QQ
 
 登入後... 抓猴子囉!!
 ![ ](https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/CSS-Keylogger/pic/04.gif)
 
 基本上五隻猴子只有一隻點得到Flag，如果不想慢慢用滑鼠點的話可以縮小視窗把他們關起來，或是直接開 source code 找連結拿 Flag !!
-
 ![](https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/CSS-Keylogger/pic/05.png)
 
 
@@ -90,6 +97,7 @@ images~ images~ images~
 #### Solution
 
 這題看起來沒有什麼特殊情境，就是很刻意的希望同學用 coding 解決問題XD
+
 基本作法和 [駭客攻防 hw_0x01 Writeup](https://blog.eevee.tw/2020/201104-htcf-hw1-writeup/) 差不多，只是要還原的東西不太一樣。
 
 封包題起手式一樣 `Follow > TCP Stream`，看到封包內容有 `xor_key`、`image` 那就是要把圖片 XOR 還原出來了，方向應該是不難猜，只是在往後看可以發現有多達100個圖片，所以還是乖乖寫扣ㄅ。
@@ -102,7 +110,7 @@ scapy 的教學參考上面連結就不再贅述，不過要注意的是撈 Raw 
 
 由於資料全部都串在一起，處理上有些麻煩... `xor_key` 和 `image` 可以用 `\r\n` 切出來，但 filename 就只能用 Regular Expression 篩出來，不然就是用指定位址的方式（因為圖片長度其實都相同 XD），剩下看扣應該不難懂：）
 
-{% codeblock lang:python solve.py %}
+```python=
 from scapy.all import *
 import re
 import base64
@@ -125,7 +133,7 @@ for p in pkts:
             img = open(filename, 'wb')
             img.write(bytes(res))
             img.close()
-{% endcodeblock %}
+```
 
 成功把所有圖片 dump 出來，會發現有分種檔名，分別是 0-27 還有 時間戳記，剩下就是慢慢拼 Flag 了!!
 ![ ](https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/image%200x2/pic/03.png)
@@ -137,7 +145,9 @@ for p in pkts:
 #### Description
 
 macacahub.tw 又多開了一個 port 提供 ssh
+
 你想要進來拿flag嗎？
+
 想要的話可以全部給你... 去找吧！我把所有的帳密都放在檔案裡了
 
 > hint 1: 檔案從該提供ssh服務的主機掉出來的
@@ -150,16 +160,17 @@ macacahub.tw 又多開了一個 port 提供 ssh
 
 如果有寫過 htcf 的練習題應該知道掃 port 的起手式就是 nmap，掃描查看 Domain 底下開了哪些 port 的服務 (其中 `-p-` 等同 `-p 0-65535`)。
 
-{% codeblock lang:shell line_number:false %}
+```shell
 nmap -p- macacahub.tw
 nmap -sV -p 55555 macacahub.tw
-{% endcodeblock %}
+```
 
 根據 hint 3 ，我們可以知道目標 port 是 55555，再進一步利用 `-sV` 查到是 ssh 服務（hint 1），結果如下。
 
 ![ ](https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/hashmeow/pic/01.png)
 
 找到連線入口，接下來我們需要 ssh 連線的帳號密碼。
+
 從題目給的 passwd 和 shadow 其實就是存放密碼的檔案，只不過是被 Hash 過的 (可參考 [相關文章](https://www.cyberciti.biz/faq/understanding-etcshadow-file/)），如果想知道更細節內容可以去翻 [鳥哥的私房菜](http://linux.vbird.org/linux_basic/0410accountmanager.php)，總之這裡我們需要想辦法把密碼爆破出來!!
 ![ ](https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/hashmeow/pic/03.png)
 
@@ -167,7 +178,7 @@ nmap -sV -p 55555 macacahub.tw
 根據 hint 2，可以找到字典檔 [10k-most-common.txt](https://github.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10k-most-common.txt) 並下載至本機端。
 ![ ](https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/hashmeow/pic/02.png)
 
-再來就是用 `hashcat` 這個密碼還原工具，題目的 hashmeow 其實就是在暗示這個XDDDD 可參考 hashcat 相關文章，要注意的是 shadow 內的 $6$ 是指 SHA-512，指令要對應到 `-m 1800`，另外結尾要掛上 `--show` 不然會沒有結果（笑），針對 shadow 使用 hashcat 可以找到兩組密碼，分別是 root:root 和 shelly:shelly，真的是**弱密碼**欸... 其實就是 hint 5 的部分。
+再來就是用 `hashcat` 這個密碼還原工具，題目的 hashmeow 其實就是在暗示這個，可參考 hashcat 相關文章，要注意的是 shadow 內的 $6$ 是指 SHA-512，指令要對應到 `-m 1800`，另外結尾要掛上 `--show` 不然會沒有結果（笑），針對 shadow 使用 hashcat 可以找到兩組密碼，分別是 root:root 和 shelly:shelly，真的是**弱密碼**欸... 其實就是 hint 5 的部分。
 ![ ](https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/hashmeow/pic/04.png)
 
 接著就是要嘗試用 shelly 的帳號登入（平常並不會有人直接用 root 登入，雖然這題預設也鎖 root 登入）。
@@ -180,12 +191,14 @@ nmap -sV -p 55555 macacahub.tw
 #### Description
 
 與hashmeow同題目
+
 但是flag在root的家裡
 
 #### Solution
 
 承接上題的作法，分數比較低的原因是 Flag 單純放不同資料夾而已 XD
-回到根目錄`/`，並且根據提示移動到 root 目錄會發現權限不足，就連 `sudo` 也不能用QQ 不過有一招基本的提權方式是 `sudo su`，那我們可以從 `bin` 目錄找到 `su` 並且直接執行，被要求輸入的root密碼就是我們剛剛透過 hashcat 爆出來的 root:root，輕鬆提權!!!
+
+回到根目錄`/`，並且根據提示移動到 root 目錄會發現權限不足，就連 `sudo` 也不能用QQ 不過有一招基本的提權方式是 `sudo su`，那我們可以從 `bin` 目錄找到 `su` 並且直接執行，被要求輸入的root密碼就是我們剛剛透過 hashcat 爆出來的 root:root，提權!!!
 
 剩下就只是回 `/root`，拿 Flag !!
 
@@ -196,7 +209,9 @@ nmap -sV -p 55555 macacahub.tw
 #### Description
 區網中有一個FTP伺服器，好像有漏洞來著(網路遮罩255.255.255.0，不是 xxx.xxx.xxx.1那台主機)
 
-請先ssh遠端連線至攻擊用主機(同CTF平台初始的帳號密碼) 接著在攻擊機的區網中找出有漏洞的主機 並且exploit有漏洞的主機 最後取得"/var/www/html/_backup"目錄下的flag檔
+請先ssh遠端連線至攻擊用主機(同CTF平台初始的帳號密碼) 接著在攻擊機的區網中找出有漏洞的主機 
+
+並且exploit有漏洞的主機 最後取得"/var/www/html/_backup"目錄下的flag檔
 
 ssh -p 8778 {你的帳號}@macacahub.tw
 
@@ -212,6 +227,7 @@ ssh -p 8778 {你的帳號}@macacahub.tw
 ![ ](https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/ProFTPD/pic/02.png)
 
 剩下就是工具使用，如果有寫課堂作業應該知道基本的操作方式..吧XD
+
 參數的設定上 RHOST 目標IP為 nmap 掃出來的 172.30.0.2，SITEPATH 為題目描述的 `/var/www/html/`，這題還需要設定 payloads... 而且並不是每一組 payload 都能成功需要一點運氣，不過數量也不多把 payload 全部戳一遍也蠻快der。
 ![ ](https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/ProFTPD/pic/03.png)
 
@@ -221,7 +237,7 @@ ssh -p 8778 {你的帳號}@macacahub.tw
 
 
 
-{% codeblock lang:shell 簡單列一下流程 line_number:false %}
+```shell
 $ ifconfig #查看當前主機ip: 172.30.0.3
 $ nmap 172.30.0.0/24 #掃區網，找到 FTP 主機(ip 172.30.0.2, port 21)
 $ nmap -sV -p 21 172.30.0.2 #查看剛主機細部資訊，發現是ProFTPD 1.3.5
@@ -244,7 +260,7 @@ msf5 exploit(unix/ftp/proftpd_modcopy_exec) > exploit
 ls 
 ls _backup
 cat _backup/f1aaag.txt
-{% endcodeblock %}
+```
 
 
 
