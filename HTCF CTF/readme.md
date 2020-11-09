@@ -12,5 +12,5 @@ site: https://htcf.macacahub.tw
 
 ## Midterm
 
-site: https://mid.macacahub.tw/
+site: https://mid.macacahub.tw
 
