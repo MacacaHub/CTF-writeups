@@ -67,7 +67,7 @@ images~ images~ images~
 
 ![ ](https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/CSS-Keylogger/pic/02.png)
 
-其中前面的 `/e/` 表示 email、`p` 表示password，也算一種小提示。
+其中前面的 `/e/` 表示 email、`/p/` 表示password，也算一種小提示。
 
 總之整理前面所觀察到的封包特徵，可以用 filter 簡單過濾出來（當然用 TCP Stream 慢慢點也是可以）。
 
@@ -108,7 +108,7 @@ images~ images~ images~
 scapy 的教學參考上面連結就不再贅述，不過要注意的是撈 Raw 欄位的資料會有兩種情況（如圖），推測是封包太長被截成兩段QQ ，條件判斷上可以根據封包長度或是判斷資料內容是否有關鍵字。最後，我們關心的重點在 `xor_key`、`image` 還有 ... 檔名!! 寫完就知道了XD
 ![ ](https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/image%200x2/pic/02.png)
 
-由於資料全部都串在一起，處理上有些麻煩... `xor_key` 和 `image` 可以用 `\r\n` 切出來，但 filename 就只能用 Regular Expression 篩出來，不然就是用指定位址的方式（因為圖片長度其實都相同 XD），剩下看扣應該不難懂：）
+由於資料全部都串在一起，處理上有些麻煩... `xor_key` 和 `image` 可以用 `\r\n` 切出來，但 filename 就只能用 [Regular Expression](https://regex101.com/) 篩出來，不然就是用指定位址的方式（因為圖片長度其實都相同 XD），剩下看扣應該不難懂：）
 
 ```python=
 from scapy.all import *
@@ -135,7 +135,7 @@ for p in pkts:
             img.close()
 ```
 
-成功把所有圖片 dump 出來，會發現有分種檔名，分別是 0-27 還有 時間戳記，剩下就是慢慢拼 Flag 了!!
+成功把所有圖片 dump 出來，會發現有分兩種檔名，分別是 0-27 還有 時間戳記，剩下就是慢慢拼 Flag 了!!
 ![ ](https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/image%200x2/pic/03.png)
 
 
