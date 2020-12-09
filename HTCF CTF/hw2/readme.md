@@ -1,4 +1,4 @@
-# HW 0x02
+# HW 0x02 writeups
 
 [news, Web, 160 points](./readme.md#news-160-points)
 
