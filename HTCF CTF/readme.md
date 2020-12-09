@@ -7,11 +7,15 @@ The CTF training in NSYSU course HACK TECHNOLOGY & COMPUTER FORENSIC
 
 site: https://htcf.macacahub.tw
 
-1. reverse shell (250 points)
+1. [reverse shell (250 points)](./hw1/readme.md)
 
-2. news (160 points) & error message (220 poins) (Unpublished)
+2. [news (160 points), error message (220 poins)](./hw2/readme.md)
 
 ## Midterm
 
 site: https://mid.macacahub.tw
+
+[Writeups](./midterm/readme.md)
+
+
 
