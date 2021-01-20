@@ -16,10 +16,32 @@
 
 # Useful tool
 
+## Web
+- [Web-CTF-Cheatsheet](https://github.com/w181496/Web-CTF-Cheatsheet)
+- [GitHacker](https://github.com/WangYihang/GitHacker): A Git source leak exploit tool that restores the entire Git repository.
+- [Sublist3r](https://github.com/aboul3la/Sublist3r): Fast subdomains enumeration tool for penetration testers
+- [EditThisCookie (Google Chrome Extension)](https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg) 
+
+## Forensics
 - Steganography
 	- [aperisolve (online)](https://aperisolve.fr/)
 	- [stegsolve](https://github.com/zardus/ctf-tools/tree/master/stegsolve)
+- Packet analysis
+	- [scapy](https://scapy.net)
+- Others
+	- [QRazyBox](https://merricx.github.io/qrazybox/): QR Code Analysis and Recovery Toolkit
+
+## Reverse
+- [Java Decompiler](http://java-decompiler.github.io)
+- [pyinstxtractor](https://github.com/extremecoders-re/pyinstxtractor): PyInstaller Extractor
+- [dnSpy](https://github.com/dnSpy/dnSpy): .NET debugger and assembly editor
+
+## Pwn
 
 
-Google Chrome Extension
-- [EditThisCookie](https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg)
+## Crypto
+- [CTF overview (HackMD)](https://hackmd.io/@n2bzaPikTJOQuazqdQUyWg/ByAYpG-zZ)
+- [factordb (online)](http://www.factordb.com/index.php)
+
+
+
