@@ -14,20 +14,13 @@ Author: toxicpie
 
 ## Solution
 
-You can get `cat.png` from the Problem.
+In 'Main.hs' and 'Nim.hs', we can learn how to encrypt the flag.
 
-use command `binwalk` to get information from the header, then you will find out some "Zlib compressed data" inside.
+I use python to simulate the Nim, and test the encrypt steps.
+Then, adjust the parameter and reverse the encrypt steps to decrypt it.
+As in 'crack.py'.
 
-use command `foremost` to recover the image , you will get other two images and also have zlib inside,  respectively.
+The behavior of Nim and the encrypt scheme can be seen in 'crack.py', too.
+If haskell is hard to read.
 
-use the command below to see the difference between two images in pixels.
-```
-compare 00000000.png 00000725.png -compose src diff.png
-```
-
-and you will get the QR code. (link: [https://imgur.com/download/Xrv86y](https://imgur.com/download/Xrv86y))
-
-After scanning the QR code, you can get the final image, using any text editor or command `strings` to find the flag inside.
-
-
-**BAMBOOFOX{Y0u_f1nd_th3_h1dd3n_c4t!!!}**
+**flag{did_you_solve_with_dft_or_lagrange_polynomial}**
