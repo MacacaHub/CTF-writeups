@@ -1,0 +1,35 @@
+version: '3.7'
+
+services: 
+  metasploit:
+    build: ./kalilinux-metasploit
+    networks:
+      bridge:
+        ipv4_address: 172.63.0.20
+    volumes:
+      - ./labs/metasploit:/root
+    environment:
+      - PUID=1000
+      - PGID=1000
+    ports:
+      - '0.0.0.0:22000:22'
+    command: /root/init.sh /root/users
+
+  victim:
+    build: ./kalilinux-victim
+    networks:
+      bridge:
+        ipv4_address: 172.63.0.21
+    volumes:
+      - ./labs/victim:/hacker_meow
+      - ./labs/victim_init:/init
+    command: /init/init.sh
+    #tail -f /dev/null #keep container alive
+
+networks:
+  bridge:
+    ipam:
+      driver: default
+      config:
+          - subnet: 172.63.0.0/24
+            gateway: 172.63.0.1

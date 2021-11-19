@@ -1,0 +1,104 @@
+version: '3.7'
+
+services: 
+  #55555
+  catch_the_monkey:
+    build: ./apache-php
+    networks:
+      bridge:
+        ipv4_address: 172.28.0.10
+    volumes:
+      - ./labs/monkey:/var/www/html:ro
+    ports:
+      - '0.0.0.0:55555:80'
+  #10110
+  password_in_pcap_1:
+    build: ./apache-php
+    networks:
+      bridge:
+        ipv4_address: 172.28.0.20
+    volumes: 
+      -  ./labs/password_in_pcap_1:/var/www/html:ro
+    ports: 
+      -  '0.0.0.0:10110:80'
+  #10120
+  password_in_pcap_2:
+    build: ./apache-php
+    networks:
+      bridge:
+        ipv4_address: 172.28.0.21
+    volumes: 
+      -  ./labs/password_in_pcap_2:/var/www/html:ro
+    ports: 
+      -  '0.0.0.0:10120:80'
+  #10210
+  log_me_in:
+    build: ./apache-php
+    networks:
+      bridge:
+        ipv4_address: 172.28.0.30
+    volumes:
+      - ./labs/log_me_in:/var/www/html:ro
+    ports:
+      - '0.0.0.0:10210:80'
+    depends_on:
+      - login_db 
+  #10220
+  log_me_in_waf:
+    build: ./apache-php
+    networks:
+      bridge:
+        ipv4_address: 172.28.0.31
+    volumes:
+      - ./labs/log_me_in_WAF:/var/www/html:ro
+    ports:
+      - '0.0.0.0:10220:80'
+    depends_on:
+      - login_db
+  #10230
+  log_me_in_strong_waf:
+    build: ./apache-php
+    networks:
+      bridge:
+        ipv4_address: 172.28.0.32
+    volumes:
+      - ./labs/log_me_in_strong_WAF:/var/www/html:ro
+    ports:
+      - '0.0.0.0:10230:80'
+    depends_on:
+      - login_db
+
+  login_db:
+    image: mysql:5.7
+    networks:
+      bridge:
+        ipv4_address: 172.28.0.130
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - "./labs/login_db:/docker-entrypoint-initdb.d"
+    environment:
+      MYSQL_DATABASE: usersdb 
+      MYSQL_USER: user_manager
+      MYSQL_PASSWORD: user_manager_p@ssw0rd
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+
+  hashcat:
+    build: ./kalilinux-ssh
+    networks:
+      bridge:
+        ipv4_address: 172.28.0.222
+    environment:
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - ./labs/hashcat:/root/hacker_meow
+    ports:
+      - '0.0.0.0:20000:22'
+
+networks:
+  bridge:
+    ipam:
+      driver: default
+      config:
+          - subnet: 172.28.0.0/24
+            gateway: 172.28.0.1

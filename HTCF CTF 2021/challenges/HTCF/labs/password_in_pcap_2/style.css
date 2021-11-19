@@ -1,0 +1,141 @@
+html, body {
+	height: 100%;
+}
+
+.global-container {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #f5f5f5;
+}
+
+form {
+	padding-top: 10px;
+	font-size: 14px;
+	margin-top: 30px;
+}
+
+.card-title {
+	font-weight: 300;
+}
+
+.btn {
+	text-align: center;
+}
+
+.form {
+	width: 330px;
+	margin: 20px;
+}
+
+.alert {
+	margin-bottom: -30px;
+	font-size: 13px;
+	margin-top: 20px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font: 71%/1.5 Verdana, Sans-Serif;
+	background: #eee;
+}
+
+#container {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #f5f5f5;
+}
+
+#keyboard {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#keyboard li, button {
+	float: left;
+	margin: 0 5px 5px 0;
+	width: 60px;
+	height: 60px;
+	font-size: 24px;
+	line-height: 60px;
+	text-align: center;
+	background: #fff;
+	border: 1px solid #888888;
+	border-radius: 5px;
+}
+
+.num_input{
+	margin: 0 5px 5px 0;
+	width: 190px;
+	height: 60px;
+	font-size: 24;
+	text-align: center;
+	background: #fff;
+	border: 1px solid #888888;
+	border-radius: 5px;
+}
+
+.capslock, .tab, .left-shift, .clearl, .switch {
+	clear: left;
+}
+
+#keyboard .tab, #keyboard .delete {
+	width: 125px;
+}
+
+#keyboard .capslock {
+	width: 80px;
+}
+
+#keyboard .return {
+	width: 90px;
+}
+
+#keyboard .left-shift {
+	width: 70px;
+}
+
+#keyboard .switch {
+	width: 90px;
+}
+
+#keyboard .rightright-shift {
+	width: 109px;
+}
+
+.lastitem {
+	margin-right: 0;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+#keyboard .space {
+	float: left;
+	width: 556px;
+}
+
+#keyboard .switch, #keyboard .space, #keyboard .return {
+	font-size: 16px;
+}
+
+.on {
+	display: none;
+}
+
+#keyboard li:hover, button:hover {
+	position: relative;
+	top: 1px;
+	left: 1px;
+	border-color: #ff0000;
+	cursor: pointer;
+}
