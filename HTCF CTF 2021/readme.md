@@ -1,7 +1,5 @@
 # Hacker And Forensic Midterm CTF Writeup
 
-[toc]
-
 # welcom
 
 ## [50] welcome
