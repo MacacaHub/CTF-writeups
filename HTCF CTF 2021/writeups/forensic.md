@@ -20,7 +20,7 @@ http://mid.macacahub.tw:10110
 
 在忽略少許封包後，第一筆HTTP封包便可以看出一些資訊。
 
-> ![](../img/packet1_http.png)
+> ![](./img/packet1_http.png)
 
 但嘗試後該組帳號密碼是錯誤的。
 
@@ -51,15 +51,15 @@ http://mid.macacahub.tw:10120
 先致歉，這題其實不需要使用 hex editor，但是出題者只會 hex editor 才會把 hint 寫成這樣。
 
 一樣觀察封包，應可發現有 GET /01.png 的流量，呼應題目所說用圖片傳送密碼。
-> ![](../img/packet2_png.png)
+> ![](./img/packet2_png.png)
 
 此處可以使用 wireshark 的功能將圖片 dump 出來。
-> ![](../img/packet2_export_step.png)
+> ![](./img/packet2_export_step.png)
 > 
 > File > Export Objects > HTTP
 
 匯出後應可看到該封包內所有的圖片。
-> ![](../img/packet2_export.png)
+> ![](./img/packet2_export.png)
 
 儲存後利用密碼登入題目敘述的網站即可取得flag
 

@@ -38,6 +38,6 @@ hashcat -m 500 -a 0 shadow 10k-most-common.txt
 hashcat -m 500 -a 0 shadow 10k-most-common.txt --show
 ```
 
-![](../img/hash_hashcat.png)
+![](./img/hash_hashcat.png)
 
 之後利用 root:jojojo 連入主機應可看到 hacker_meow 留下的flag

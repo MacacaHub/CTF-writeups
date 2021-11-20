@@ -15,10 +15,10 @@
 
 ### **solution**
 依據題意需先掃描 port 找到正確的港口。
-> ![](../img/port_scan_nmap.png)
+> ![](./img/port_scan_nmap.png)
 
 之後上[島](mid.macacahub.tw:55555)抓猴子。
-> ![](../img/port_scan_monkey.png)
+> ![](./img/port_scan_monkey.png)
 
 島上有五隻猴子，除了正確的猴子，其他猴子都只會亂叫。
 > oo oa aa ao aaa a oooo oa aoao aoa o oao aa aaa ao aoa o aoaa

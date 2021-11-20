@@ -16,7 +16,7 @@ http://mid.macacahub.tw:10210
 
 會告訴你帳號密碼輸入後的sql語法長什麼樣子。
 
-> ![](../img/sql1_magic.png)
+> ![](./img/sql1_magic.png)
 
 因為是第一題，設定上沒有擋任何字元，只需要基本的 SQL Injection 語法即可。
 1. admin' ; -- 
@@ -129,7 +129,7 @@ http://mid.macacahub.tw:10230
 
 在猜測欄位正常登入後，應會顯示如下：
 
-![](../img/sql3_union_login.png)
+![](./img/sql3_union_login.png)
 
 因此猜測上面payload放2的位置會對應到username，修改 2 為 hacker_meow 應可正常登入取得flag。
 

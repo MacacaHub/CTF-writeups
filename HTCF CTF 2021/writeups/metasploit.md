@@ -31,7 +31,7 @@ ssh mid.macacahub.tw -p 22000 -l "帳號"
 
 連入主機後先用 nmap 掃描靶機確認漏洞。
 
-> ![](../img/metasploit_port_scan.png)
+> ![](./img/metasploit_port_scan.png)
 
 開的 port 不多，samba 預設使用 445 port，不須額外尋找其他 port。
 
@@ -39,7 +39,7 @@ ssh mid.macacahub.tw -p 22000 -l "帳號"
 ```shell=
 msf> search samba
 ```
-> ![](../img/metasploit_search.png)
+> ![](./img/metasploit_search.png)
 
 根據題意，搜尋 [20072447](https://bfy.tw/S2vX) 後應可查到唯一的 Samba Usermap Script 漏洞，請使用對應的 module。
 
@@ -47,7 +47,7 @@ msf> search samba
 msf> use exploit/multi/samba/usermap_script
 msf> show options
 ```
-> ![](../img/metasploit_options.png)
+> ![](./img/metasploit_options.png)
 
 照選項填完 RHOST 以及 RPORT 即可，因不是考點，該題不需修改其他東西。
 
