@@ -2,6 +2,7 @@
 
 - 2021
 	- BambooFox CTF 2021
+	- HTCF CTF 2021 (only for NSYSU course)
 
 - 2020
     - TCat CTF 2020
