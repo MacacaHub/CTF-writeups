@@ -1,6 +1,6 @@
 # HTCF CTF
 
-The CTF training in NSYSU course HACK TECHNOLOGY & COMPUTER FORENSIC
+The CTF training in NSYSU course HACK TECHNOLOGY & COMPUTER FORENSIC (Fall, 2020).
 
 
 ## Homework
