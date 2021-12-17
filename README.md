@@ -2,12 +2,12 @@
 
 - 2021
 	- BambooFox CTF 2021
-	- HTCF CTF 2021 (only for NSYSU course)
+	- HTCF Mid CTF 2021 (only for NSYSU course)
 
 - 2020
     - TCat CTF 2020
 	- TJCTF 2020
-    - HTCF CTF 2020 (only for NSYSU course)
+    - HTCF Mid CTF 2020 (only for NSYSU course)
 
 - 2019
     - X-MAS CTF 2019
@@ -21,18 +21,18 @@
 - [Web-CTF-Cheatsheet](https://github.com/w181496/Web-CTF-Cheatsheet)
 - [GitHacker](https://github.com/WangYihang/GitHacker): A Git source leak exploit tool that restores the entire Git repository.
 - [Sublist3r](https://github.com/aboul3la/Sublist3r): Fast subdomains enumeration tool for penetration testers
-- [nmap](https://github.com/nmap/nmap): Nmap ("Network Mapper") is a free and open source (license) utility for network discovery and security auditing.
+- [nmap](https://github.com/nmap/nmap): Network discovery and security auditing.
 	- Common command: `nmap -Pn -sT -sV -p0-65535 {target_ip}`
 - [dirb](https://github.com/zardus/ctf-tools/blob/master/dirb/install)
 - [sqlmap](https://github.com/sqlmapproject/sqlmap): Automatic SQL injection and database takeover tool.
 - [wfuzz](https://github.com/xmendez/wfuzz): Web application fuzzer.
-- Useful Command 
+- Basic Command 
 	- `ping`
 	- `whois`
 	- `nslookup`
 	- `dig`
-- Google Chrome Extension
-	- [EditThisCookie (Google Chrome Extension)](https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg)
+- Chromium Extension
+	- [EditThisCookie](https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg)
 	- [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg)
 	- [ModHeader](https://chrome.google.com/webstore/detail/modheader/idgpnmonknjnojddfkpgkljpfnnfcklj)
 
@@ -49,9 +49,11 @@
 - [JD-GUI](http://java-decompiler.github.io): Fast Java decompiler.
 - [pyinstxtractor](https://github.com/extremecoders-re/pyinstxtractor): PyInstaller Extractor
 - [dnSpy](https://github.com/dnSpy/dnSpy): .NET debugger and assembly editor
+- Basic Command 
+	- `objdump`
 
 ## Pwn
-- [pwntool]()
+- [pwntool](https://github.com/Gallopsled/pwntools): CTF framework and exploit development library.
 
 ## Crypto
 - [CTF overview (HackMD)](https://hackmd.io/@n2bzaPikTJOQuazqdQUyWg/ByAYpG-zZ)
@@ -59,8 +61,7 @@
 - [quipquip (online)](https://quipqiup.com)
 - [Cyberchef (online)](https://gchq.github.io/CyberChef/)
 - [Hashcat](https://hashcat.net/hashcat/)
+- Wordlists
 	- [rockyou.txt](https://github.com/praetorian-inc/Hob0Rules/blob/master/wordlists/rockyou.txt.gz)
 	- [10k-most-common.txt](https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/10k-most-common.txt)
-
-
 
