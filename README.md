@@ -43,16 +43,18 @@
 	- [openstego](https://github.com/syvaidya/openstego): Steganography application provides "Data Hiding" & "Watermarking" functionalities.
 	- [TweakPNG](https://github.com/jsummers/tweakpng): A low-level PNG image file manipulation utility for Windows.
 	- [foremost](http://foremost.sourceforge.net)
-
 - Packet analysis
 	- [scapy](https://scapy.net)
+- Memory dump analysis
+	- [Volatility](https://github.com/volatilityfoundation/volatility): An advanced memory forensics framework.
+	- [Bulk Extractor](https://github.com/simsong/bulk_extractor)
 - Others
-	- [QRazyBox](https://merricx.github.io/qrazybox/): QR Code Analysis and Recovery Toolkit
+	- [QRazyBox](https://merricx.github.io/qrazybox/): QR Code Analysis and Recovery Toolkit.
 
 ## Reverse
 - [JD-GUI](http://java-decompiler.github.io): Fast Java decompiler.
-- [pyinstxtractor](https://github.com/extremecoders-re/pyinstxtractor): PyInstaller Extractor
-- [dnSpy](https://github.com/dnSpy/dnSpy): .NET debugger and assembly editor
+- [pyinstxtractor](https://github.com/extremecoders-re/pyinstxtractor): PyInstaller Extractor.
+- [dnSpy](https://github.com/dnSpy/dnSpy): .NET debugger and assembly editor.
 - Basic Command 
 	- `objdump`
 	- `binwalk`
@@ -67,10 +69,12 @@
 - [Cyberchef (online)](https://gchq.github.io/CyberChef/)
 - [Hashcat](https://hashcat.net/hashcat/)
 - [John the Ripper](https://github.com/openwall/john)
-- [RsaCtfTool](https://github.com/Ganapati/RsaCtfTool): RSA attack tool (mainly for ctf)
+- [RsaCtfTool](https://github.com/Ganapati/RsaCtfTool): RSA attack tool (mainly for ctf).
 - Wordlists
 	- [rockyou.txt](https://github.com/praetorian-inc/Hob0Rules/blob/master/wordlists/rockyou.txt.gz)
 	- [10k-most-common.txt](https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/10k-most-common.txt)
 
 ## Others
-- [Proof of Work](https://balsn.tw/proof-of-work/)
+- [Proof of Work (Balsn)](https://balsn.tw/proof-of-work/)
+- [Metasploit](https://www.metasploit.com)
+- [Empire](https://github.com/EmpireProject/Empire): A PowerShell and Python post-exploitation agent.
